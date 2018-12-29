@@ -207,7 +207,8 @@ export const routes = [
       },
       {
         label: "create",
-        path: "/tokens/create",
+        //path: "/tokens/create",
+        url: "https://tron.mywish.io/create",
         icon: "fa fa-plus-square",
         component: TokensCreateAsync
       }
