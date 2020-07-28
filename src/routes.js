@@ -359,16 +359,6 @@ export const routes = [
         url: "https://github.com/tronscan/tronscan-desktop/releases",
         icon: "fa fa-download",
         label: "desktop_explorer"
-      },
-      {
-        url: "https://explorer.shasta.trongrid.io",
-        icon: "fa fa-link",
-        label: "link_test_server"
-      },
-      {
-        url: "https://www.trongrid.io/shasta",
-        icon: "fa fa-recycle",
-        label: "link_test_fauct"
       }
     ]
   },
@@ -487,21 +477,6 @@ export const routes = [
                     path: "/tools/node-tester",
                     icon: "fa fa-server",
                     component: NodeTesterAsync
-                },
-                // {
-                //     url: "https://github.com/tronscan/tronscan-desktop/releases",
-                //     icon: "fa fa-download",
-                //     label: "desktop_explorer"
-                // },
-                {
-                    url: "https://explorer.shasta.trongrid.io",
-                    icon: "fa fa-link",
-                    label: "link_test_server"
-                },
-                {
-                    url: "https://www.trongrid.io/shasta",
-                    icon: "fa fa-recycle",
-                    label: "link_test_fauct"
                 }
             ],
             [

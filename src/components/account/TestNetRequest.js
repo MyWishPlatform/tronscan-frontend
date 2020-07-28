@@ -117,9 +117,6 @@ export default class TestNetRequest extends React.Component {
     return (
         <div>
           {modal}
-          <p className="pt-1">
-            {tu("information_message_1")}
-          </p>
           {
             success ?
                 <Alert color="success">
@@ -128,7 +125,7 @@ export default class TestNetRequest extends React.Component {
                 <React.Fragment>
                   <p className="d-flex justify-content-center">
                     <RecaptchaAsync
-                        sitekey="6Le7AV4UAAAAADGmYVtg_lZuLj3w9xjwd7-P3gqX"
+                        sitekey="6Lf3k4YUAAAAAKy5heE-ITl2r3BvuI55w2AeiaT8"
                         render="explicit"
                         onloadCallback={this.onLoad}
                         expiredCallback={this.onExpired}

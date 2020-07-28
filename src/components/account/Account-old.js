@@ -1393,6 +1393,45 @@ class Account extends Component {
                                 </tr>
                                 </thead>
                                 <tbody>
+                                {
+                                    currentWallet.exchanges.length? currentWallet.exchanges.map((exchange, index) => {
+                                        return (
+                                            <tr key={index}>
+                                                <td>
+                                                    {exchange.first_token_id === "_"?"TRX":exchange.first_token_id}/{exchange.second_token_id === "_"?"TRX":exchange.second_token_id}
+                                                </td>
+                                                <td>
+                                                    <FormattedNumber value={ exchange.first_token_id === "_"? exchange.first_token_balance / ONE_TRX : exchange.first_token_balance }/>
+                                                    /
+                                                    <FormattedNumber value={ exchange.second_token_id === "_"? exchange.second_token_balance / ONE_TRX : exchange.second_token_balance }/>
+                                                </td>
+                                                <td className="text-right" style={{display:'flex',flexDirection:'row',justifyContent:'flex-end'}}>
+                                    <div className="dex-inject" style={{whiteSpace:'nowrap'}}
+                                          onClick={() => {
+                                              this.injectTxnPair(exchange)
+                                          }}
+                                    >
+                                        {tu("capital_injection")}
+                                    </div>
+                                                    |
+                                                    <div className="dex-divestment" style={{whiteSpace:'nowrap'}}
+                                                          onClick={() => {
+                                                              this.withdrawTxnPair(exchange)
+                                                          }}
+                                                    >
+                                       {tu("capital_withdrawal")}
+                                    </div>
+                                                </td>
+                                            </tr>
+                                        )
+                                    }):<tr>
+                                        <td></td>
+                                        <td>
+                                            {tu('no_pairs')}
+                                        </td>
+                                        <td></td>
+                                    </tr>
+                                }
                                 </tbody>
                             </table>
                             </div>
